@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": [
+      "dom",
+      "ES6",
+      "ESNext"
+    ],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "jsx": "react",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": false
+  },
+  "include": [
+    "./src"
+  ]
+}
