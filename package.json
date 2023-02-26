@@ -1,6 +1,6 @@
 {
     "name": "react-owl-carousel-dotlab",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "React.js + Owl Carousel",
     "main": "umd/OwlCarousel.js",
     "types": "umd/OwlCarousel.d.ts",

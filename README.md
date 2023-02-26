@@ -3,28 +3,18 @@
 [React](http://facebook.github.io/react/) + [Owl Carousel 2.3](https://owlcarousel2.github.io/OwlCarousel2/)
 
 
-### codes edited by grandfather
+### codes edited by dotlab
 
-### 1. Getting Started
 
--   You need to inject a global window.jQuery first.
 
-e.g. webpack
+### 1. Set up your component
 
-```js
-// ...
-plugins: [
-    // other plugins,
-    new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-    }),
-],
-//...
+```jsx
+
+npm insatal @loadable/component
+
 ```
 
-you can use html script tag to inject jquery as well.
 
 ### 2. Set up your component
 
@@ -32,7 +22,7 @@ wrap your divs inside the OwlCarousel component
 
 ```jsx
 import React from 'react';
-import OwlCarousel from 'react-owl-carousel-dede';
+const OwlCarousel = Loadable(() => import("react-owl-carousel-dotlab"));
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
