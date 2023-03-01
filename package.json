@@ -1,6 +1,6 @@
 {
     "name": "react-owl-carousel-dotlab",
-    "version": "0.0.5",
+    "version": "0.0.10",
     "description": "React.js + Owl Carousel",
     "main": "umd/OwlCarousel.js",
     "types": "umd/OwlCarousel.d.ts",
@@ -23,7 +23,7 @@
         "type": "git",
         "url": "git+https://github.com/dotlabtr/react-owl-carousel-dotlab.git"
     },
-    "author": "xhriman",
+    "author": "xhriman + dotlab",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/dotlabtr/react-owl-carousel-dotlab"
