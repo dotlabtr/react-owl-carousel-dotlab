@@ -11,7 +11,7 @@
 
 ```jsx
 
-npm insatal @loadable/component
+npm insatal react-owl-carousel-dotlab
 
 ```
 
@@ -21,52 +21,47 @@ npm insatal @loadable/component
 wrap your divs inside the OwlCarousel component
 
 ```jsx
+
 import React from 'react';
-const OwlCarousel = Loadable(() => import("react-owl-carousel-dotlab"));
+const OwlCarousel form 'react-owl-carousel-dotlab'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-// ....
 
-// className "owl-theme" is optional
-<OwlCarousel className='owl-theme' loop margin={10} nav>
-    <div class='item'>
-        <h4>1</h4>
-    </div>
-    <div class='item'>
-        <h4>2</h4>
-    </div>
-    <div class='item'>
-        <h4>3</h4>
-    </div>
-    <div class='item'>
-        <h4>4</h4>
-    </div>
-    <div class='item'>
-        <h4>5</h4>
-    </div>
-    <div class='item'>
-        <h4>6</h4>
-    </div>
-    <div class='item'>
-        <h4>7</h4>
-    </div>
-    <div class='item'>
-        <h4>8</h4>
-    </div>
-    <div class='item'>
-        <h4>9</h4>
-    </div>
-    <div class='item'>
-        <h4>10</h4>
-    </div>
-    <div class='item'>
-        <h4>11</h4>
-    </div>
-    <div class='item'>
-        <h4>12</h4>
-    </div>
-</OwlCarousel>;
+const MyWorkspace = () => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [data, setData] = useState(true)
+
+    const options = {
+        items: 3,
+        loop: true,
+        nav: true,
+        dots: false,
+        autoplay: true
+    }
+
+
+    // Getting and running data with gel
+
+     const loadData = async () => {
+        const result = await getData("/users/")
+        setData(result.data)
+        setIsLoading(false)
+    }
+
+    useEffect(() => {
+        loadData()
+    }, [isLoading])
+ return (
+
+
+     <OwlCarousel className="owl-theme" {...options}>
+                                        {data.map((data) =>
+                                        <div class='item'> <h4>{data.item}</h4>  </div>
+                                        )}
+ )
+}
+
 ```
 
 ## Event
